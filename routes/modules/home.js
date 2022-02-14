@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-const controller = require('../../controllers/home_controller')
+const homeController = require('../../controllers/home_controller')
 
-router.get('/', controller.getHome)
+router.get('/instruction', homeController.getInstruction)
+router.get('/idea', homeController.getIdea)
+router.get('/', homeController.getHome)
 
 module.exports = router

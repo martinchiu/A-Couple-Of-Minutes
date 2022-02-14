@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="/stylesheets/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/{{style}}.css" />
 </head>
-
-<body class="bg-light">
+<body class="bg-light" style="height: 100vh;">
   <header>
     <nav class="navbar navbar-dark bg-primary justify-content-between px-3">
       <a class="navbar-brand" href="/">
@@ -24,14 +24,11 @@
       {{/if}}
     </nav>
   </header>
-  <main>
-    <div class="container mt-3">
-      {{{ body }}}
-    </div>
-  </main>
+  <div class="container mt-5" style="height: 75vh;">
+    {{{ body }}}
+  </div>
   
   <script src="/javascripts/popper.js"></script>
   <script src="/javascripts/bootstrap.js"></script>
 </body>
-
 </html>
