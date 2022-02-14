@@ -54,5 +54,5 @@ a {
 }
 a > p {
   color: black;
-  
+  margin-top: 0.5rem;
 }
