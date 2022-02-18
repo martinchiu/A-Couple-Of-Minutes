@@ -13,10 +13,11 @@
 </div>
 <div class="menu">
   <div class="instruction">
-    <a href="/instruction">
+    <button type="button" class="instructionBtn" data-bs-toggle="modal"
+      data-bs-target="#instruction">
       <i class="fas fa-info icon"></i>
       <p>遊戲說明</p>
-    </a>
+    </button>
   </div>
   <div class="start">
     <a href="/game/start">
@@ -25,9 +26,124 @@
     </a>
   </div>
   <div class="concept">
-    <a href="/idea">
+    <button class="ideaBtn" data-bs-toggle="modal" data-bs-target="#idea">
       <i class="far fa-lightbulb icon"></i>
       <p>設計理念</p>
-    </a>
+    </button>
+  </div>
+</div>
+{{!-- modal --}}
+{{!-- instruction --}}
+<div class="modal fade" id="instruction" tabindex="-1" aria-labelledby="instruction" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">遊戲說明</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        雙方輪流抽牌，由抽牌的一方，逐字唸出卡牌上的問題，並指定誰先作答。<br>
+        待兩人都完成答題，即可抽出下一張牌。答題所需時間因人而異，請保持耐心，忌暴跳如雷。<br>
+        遊戲進行中，可使用遊戲開始前獲得的功能卡，每位玩家每次遊戲會獲得一張功能卡<br>
+        每次進行遊戲前，建議先等衣服洗完、飯吃完......，避免任何事故打斷過程，讓雙方至少能專心投入20分鐘，為確保對話品質，過程中也請「務必」放下手機、平板、筆電、電動、遙控器等個人愛用品。
+        <hr>
+        <h5>功能卡</h5>
+        <ul>
+          <li>Pass：暫時想不出回答，再給我一點時間，遊戲結束前給出答案</li>
+          <li>Kiss：使用親吻當作這題的回答</li>
+          <li>Hug：使用擁抱當作這題的回答</li>
+          <li>？？？：我想要聽更多，請再詳細地說明</li>
+          <li>Last ３：預告將在三個問題之後，結束這次的遊戲</li>
+          <li>Priority：這題你先回答</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#play">下一頁</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="play" tabindex="-1" aria-labelledby="play" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">遊戲說明</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        問題卡共９９張，按數字排序（1-33／34-66／67-99）分三級，等級依照深入內心的程度區別<br>
+        <ul>
+          <li>Level １｜ 以分享自己、了解對方為主</li>
+          <li>Level ２｜ 談個人經驗、性格與觀念磨合</li>
+          <li>Level ３｜ 邁向更私密、摩擦與界線試探<strong>*Warning！部分問題可能導致氣氛緊張</strong></li>
+        </ul>
+        <hr>
+        <h5>三種玩法：</h5>
+        <ul>
+          <li>玩法１：按部就班先從Level 1開始，循序漸進式破關。或兩人共識就想直接攻頂也可以</li>
+          <li>玩法２：將全套問題卡打散，隨機抽取問題</li>
+          <li>玩法３：選擇想要的主題，跟著指引玩</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn " data-bs-toggle="modal"
+          data-bs-target="#instruction">上一頁</button>
+        <button type="button" class="btn " data-bs-toggle="modal"
+          data-bs-target="#playingMethod">玩法３主題說明</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="playingMethod" tabindex="-1" aria-labelledby="playingMethod" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">主題說明</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        精心規劃五大實用主題！內含指定問答、事後分享與愛的行動<br>
+        無論是拿到卡牌第一次玩、吵架破冰，或想認真對談、開懷大笑，<br>
+        甚至是今天想和好友玩，主題卡都有提供簡易指引，只要跟著指標，一步步走入彼此的心
+        <hr>
+        <h5>五大主題</h5>
+        <ol>
+          <li>First date：Try me！恭喜第一次攤牌，歡迎先走這一套</li>
+          <li>Friend date： Hooray～不是戀人也能玩</li>
+          <li>Happy trip：Just relax！只想和你一起說說笑笑</li>
+          <li>Heavy date：Real talk！探索彼此的界線，又愛又怕的話題</li>
+          <li>Cozy trip：Break the ice！適合尷尬時破冰，或是冷戰後回暖</li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#play">上一頁</button>
+        <a class="btn" href="/game/start">開始遊戲</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- idea --}}
+<div class="modal fade" id="idea" tabindex="-1" aria-labelledby="idea" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">設計理念</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        為了不再感覺跟不上對方的腳步<br>
+        不要一個人去猜想各種下一步<br>
+        透過《關係同步卡牌(A Couple Of Minutes)》<br>
+        我們能積極創造良性對話的機會<br>
+        和在乎的人，把話說清楚<br>
+        透過每次同步一點點<br>
+        讓兩人之間，從此不必卡在一步之遙<br>
+        Have a goog date！<br>
+        By <a href="https://womany.net">Womany</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#instruction">遊戲說明</button>
+      </div>
+    </div>
   </div>
 </div>

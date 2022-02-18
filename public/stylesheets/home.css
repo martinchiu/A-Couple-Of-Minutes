@@ -30,7 +30,7 @@
   text-align: center;
   padding: 10px;
 }
-hr {
+.content hr {
   border: 5px solid #b4503c;
   width: 100%;
   margin-bottom: 80px;
@@ -51,8 +51,26 @@ a {
 }
 .icon {
   font-size: 5rem;
+  color: #eb6864;
 }
 a > p {
   color: black;
   margin-top: 0.5rem;
+}
+button > p {
+  color: black;
+  margin-top: 0.5rem;
+}
+span {
+  color: rgb(202, 203, 204);
+}
+.instructionBtn, .ideaBtn {
+  border:0; background-color:transparent
+}
+.btn {
+  background-color: #eb6864;
+  color: azure;
+}
+.btn:hover {
+  color: black;
 }
