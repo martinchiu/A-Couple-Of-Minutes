@@ -1,0 +1,57 @@
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collapseBtn {
+  width: 30%;
+  background-color: #dd715c;
+  color: azure;
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.btn:hover {
+  color: black;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+}
+/* firstMethod */
+.firstMethodLinkBtn {
+  width: 30%;
+  background-color: rgb(224, 166, 79);
+}
+/* secondMethod */
+#secondMethod {
+  max-width: 510px;
+}
+.inputDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.inputDiv input {
+  width: 40%;
+  margin-left: 2rem;
+}
+.btnDiv {
+  margin-top: 1rem;
+  text-align: center;
+}
+.formBtn {
+  width: 30%;
+  background-color:rgb(224, 166, 79) ;
+}
+/* thirdMethod */
+.thirdMethodDiv {
+  width: 850px;
+}
+.content {
+  padding-left: 3rem;
+}
+.thirdMethodLinkBtn {
+  width: 16%;
+  background-color: rgb(224, 166, 79);
+}

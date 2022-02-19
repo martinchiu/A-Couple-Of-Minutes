@@ -1,1 +1,65 @@
-<h2>game</h2>
+<div class="choice">
+  <button class="btn collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#firstMethod" data-bs-parent="secondMethod"
+    aria-expanded="false" aria-controls="firstMethod">
+    玩法一
+  </button>
+  <div class="collapse" id="firstMethod" data-bs-parent=".choice">
+    <div class="card card-body ">
+      <p>按部就班先從Level 1開始，循序漸進式破關。或兩人共識就想直接攻頂也可以</p>
+      <ul>
+        <li>Level １｜ 以分享自己、了解對方為主</li>
+        <li>Level ２｜ 談個人經驗、性格與觀念磨合</li>
+        <li>Level ３｜ 邁向更私密、摩擦與界線試探</li>
+      </ul>
+      <div class="link">
+        <a href="/game/firstMethod/level1" class="btn firstMethodLinkBtn">Level 1 </a>
+        <a href="/game/firstMethod/level2" class="btn firstMethodLinkBtn">Level 2 </a>
+        <a href="/game/firstMethod/level3" class="btn firstMethodLinkBtn">Level 3 </a>
+      </div>
+    </div>
+  </div>
+  <button class="btn collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#secondMethod"
+    aria-expanded="false" aria-controls="secondMethod">
+    玩法二
+  </button>
+  <div class="collapse" id="secondMethod" data-bs-parent=".choice">
+    <div class="card card-body">
+      問題卡共９９張，按數字排序（1-33／34-66／67-99）分三級，
+      等級依照深入內心的程度區別。將全套問題卡打散，隨機抽取問題
+      <form action="/game/secondMethod">
+        <div class="inputDiv">
+          <label class="form-label " for="number">請選擇抽取卡牌的數量：</label>
+          <input class="form-control" type="number" id="number" name="number" max="99" min="1" value="10">
+        </div>
+        <div class="btnDiv">
+          <button type="submit" class="btn formBtn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <button class="btn collapseBtn" type="button" data-bs-toggle="collapse" data-bs-target="#thirdMethod"
+    aria-expanded="false" aria-controls="thirdMethod">
+    玩法三
+  </button>
+  <div class="collapse " id="thirdMethod" data-bs-parent=".choice">
+    <div class="card card-body thirdMethodDiv">
+      <div class="content">
+        玩法３：選擇想要的主題，跟著指引玩
+        <ol>
+          <li>First date：Try me！恭喜第一次攤牌，歡迎先走這一套</li>
+          <li>Friend date： Hooray～不是戀人也能玩</li>
+          <li>Happy trip：Just relax！只想和你一起說說笑笑</li>
+          <li>Heavy date：Real talk！探索彼此的界線，又愛又怕的話題</li>
+          <li>Cozy trip：Break the ice！適合尷尬時破冰，或是冷戰後回暖</li>
+        </ol>
+      </div>
+      <div class="link">
+        <a href="/game/thirdMethod/topic/1" class="btn thirdMethodLinkBtn">First date </a>
+        <a href="/game/thirdMethod/topic/2" class="btn thirdMethodLinkBtn">Friend date </a>
+        <a href="/game/thirdMethod/topic/3" class="btn thirdMethodLinkBtn">Happy trip </a>
+        <a href="/game/thirdMethod/topic/4" class="btn thirdMethodLinkBtn">Heavy date </a>
+        <a href="/game/thirdMethod/topic/5" class="btn thirdMethodLinkBtn">Cozy date </a>
+      </div>
+    </div>
+  </div>
+</div>

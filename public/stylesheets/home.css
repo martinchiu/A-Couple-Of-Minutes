@@ -52,6 +52,10 @@ a {
 .icon {
   font-size: 5rem;
   color: #eb6864;
+  transition: transform 0.3s;
+}
+.icon:hover {
+  transform: scale(1.2);
 }
 a > p {
   color: black;
