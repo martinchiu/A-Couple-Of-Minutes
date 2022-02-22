@@ -7,7 +7,7 @@ router.get('/firstMethod/:level', gameController.getfirstMethod)
 
 router.get('/secondMethod', gameController.getsecondMethod)
 
-router.get('/thirdMethod/topic/:topicNumber', gameController.getthirdMethod)
+router.get('/thirdMethod/topic/:topic', gameController.getthirdMethod)
 
 router.get('/start', gameController.getStart)
 
