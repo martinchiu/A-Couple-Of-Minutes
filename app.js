@@ -9,8 +9,6 @@ const PORT = 3000
 app.engine('hbs', exphbs.engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
 
-require('./config/mongoose')
-
 app.use(express.static('public'))
 app.use(routes)
 
