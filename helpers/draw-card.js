@@ -2,7 +2,18 @@ const cardsNumber = function draw(method, params) {
   if (method === 'firstMethod') {
     return Array.from({ length: 33 }, (value, index) => value = index + 33 * (params - 1) + 1)
   } else if (method === 'secondMethod') {
-    return Array.from({ length: params }, (value) => value = Math.floor(Math.random() * 99 + 1))
+    function getRandomNumberArray() {
+      // 產生一個包含 1~99 數字的陣列
+      const numberArray = Array.from(Array(100).keys())
+      numberArray.splice(0, 1)
+      // Fisher–Yates shuffle
+      for (let index = numberArray.length - 1; index > 0; index--) {
+        let randomIndex = Math.floor(Math.random() * (index + 1))
+          ;[numberArray[index], numberArray[randomIndex]] = [numberArray[randomIndex], numberArray[index]]
+      }
+      return numberArray.slice(1, 10)
+    }
+    return getRandomNumberArray()
   } else if (method === 'thirdMethod') {
     switch (params) {
       case 'firstDate':
