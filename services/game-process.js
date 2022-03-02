@@ -15,4 +15,5 @@ const gameProcess = (cards) => {
   return { player, deck, cardsAmount }
 }
 
+
 module.exports = gameProcess

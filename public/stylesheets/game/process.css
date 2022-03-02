@@ -1,0 +1,25 @@
+.cardAmount {
+  display: flex;
+  justify-content: flex-end;
+  color: #b4503c;
+}
+.hourglass {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+.nextBtn {
+  border:0; background-color:transparent
+
+}
+button > p {
+  color: black;
+  margin-top: 0.5rem;
+}
+.icon {
+  font-size: 5rem;
+  color: #eb6864;
+  transition: transform 0.3s;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
