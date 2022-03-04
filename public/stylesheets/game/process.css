@@ -62,3 +62,13 @@ transition: transform 0.3s;
   background-color:white;
   border-radius: 15px;
 }
+/* dom control */
+.back {
+  background: url('https://i.imgur.com/JckQzeT.jpg');
+    background-size: cover;
+}
+.disappear {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
