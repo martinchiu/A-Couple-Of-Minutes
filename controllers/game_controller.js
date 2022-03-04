@@ -1,6 +1,5 @@
 const cardsNumber = require('../helpers/draw-card')
 const gameProcess = require('../services/game-process')
-const cardData = require('../cards.json')
 const gameController = {
   getStart: (req, res) => {
     res.render('gameStart', {
@@ -10,6 +9,7 @@ const gameController = {
   getfirstMethod: (req, res) => {
     const { level } = req.params
     const cards = cardsNumber('firstMethod', level)
+    const finale = require('../finale.json')[level]
     let { player, deck, cardsAmount } = gameProcess(cards)
     const martin = player[0]
     const stacy = player[1]
@@ -18,6 +18,7 @@ const gameController = {
       deck,
       martin,
       stacy,
+      finale,
       style: "game/process",
       script: 'process',
     })

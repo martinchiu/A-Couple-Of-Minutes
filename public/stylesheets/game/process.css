@@ -3,9 +3,10 @@
   justify-content: flex-end;
   color: #b4503c;
 }
-.hourglass {
+.smallIcon {
   font-size: 2rem;
   margin-right: 0.5rem;
+  color: #b4503c;
 }
 .icon {
   font-size: 5rem;
@@ -42,7 +43,7 @@
 .next {
   margin-top: 120px;
 }
-.nextBtn {
+.BTN {
   border:0; background-color:transparent
 }
 .nextBtn .icon {
