@@ -57,6 +57,21 @@ transition: transform 0.3s;
   margin-top: 0.5rem;
 }
 /* fn card */
+.fn-card-with-pseudo {
+  position: relative;
+}
+.fn-card-with-pseudo::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 180px;
+  height: 240px;
+  border-radius: 15px;
+  background: url('https://i.imgur.com/JckQzeT.jpg');
+  background-size: cover;
+  z-index: 1;
+}
 .fn-card {
   width: 180px;
   height: 240px;
@@ -75,7 +90,7 @@ transition: transform 0.3s;
 /* dom control */
 .back {
   background: url('https://i.imgur.com/JckQzeT.jpg');
-    background-size: cover;
+  background-size: cover;
 }
 .disappear {
   visibility: hidden;
