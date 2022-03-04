@@ -7,19 +7,58 @@
   font-size: 2rem;
   margin-right: 0.5rem;
 }
-.nextBtn {
-  border:0; background-color:transparent
-
-}
-button > p {
-  color: black;
-  margin-top: 0.5rem;
-}
 .icon {
   font-size: 5rem;
   color: #eb6864;
-  transition: transform 0.3s;
+  
 }
-.icon:hover {
+/* card */
+.cards {
+  position: relative;
+}
+.card {
+  width: 30%;
+  height: 480px;
+  border-radius: 15px;
+  margin-left: 35%;
+  position: absolute;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #aa341d;
+  border-radius: 15px 15px 0 0;
+  height: 10%;
+}
+/* next div */
+.info {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.next {
+  margin-top: 120px;
+}
+.nextBtn {
+  border:0; background-color:transparent
+}
+.nextBtn .icon {
+transition: transform 0.3s;
+}
+.nextBtn .icon:hover {
   transform: scale(1.2);
+}
+.nextBtn > p {
+  color: black;
+  margin-top: 0.5rem;
+}
+/* fn card */
+.fn-card {
+  width: 180px;
+  height: 240px;
+  background-color:white;
+  border-radius: 15px;
 }

@@ -2,10 +2,64 @@
   <i class="fas fa-hourglass-half hourglass"></i>
   <h3>Last cards : <span class="number">{{cardsAmount}}</span></h3>
 </div>
-<p class="cards">{{cards}}</p>
-<div class="next">
-  <button class="nextBtn">
-    <i class="fas fa-heartbeat icon"></i>
-    <p>抽牌</p>
-  </button>
+<div class="cards">
+  {{#each deck}}
+  <div class="card" style="z-index: -{{this.id}};">
+    <div class="header">
+      <span>．．．</span>
+      <span>{{this.id}}</span>
+    </div>
+    <div class="body">
+      <p>{{this.content}}</p>
+      <div class="icon">
+        <i class='{{{this.icon}}}'></i>
+      </div>
+    </div>
+    <div class="footer">
+      <span>A Couple Of Minutes</span>
+    </div>
+  </div>
+  {{/each }}
+</div>
+<div class="info">
+  <div class="martin">
+    <div class="fn-card">
+      <div class="header">
+        <span>．．．</span>
+        <span>fn</span>
+      </div>
+      <div class="body">
+        <p>{{martin.functionCard.name}}</p>
+        <div class="icon">
+          <i class=''></i>
+        </div>
+      </div>
+      <div class="footer">
+        <span>A Couple Of Minutes</span>
+      </div>
+    </div>
+  </div>
+  <div class="next">
+    <button class="nextBtn">
+      <i class="fas fa-heartbeat icon"></i>
+      <p>抽牌</p>
+    </button>
+  </div>
+  <div class="stacy">
+    <div class="fn-card">
+      <div class="header">
+        <span>．．．</span>
+        <span>fn</span>
+      </div>
+      <div class="body">
+        <p>{{stacy.functionCard.name}}</p>
+        <div class="icon">
+          <i class=''></i>
+        </div>
+      </div>
+      <div class="footer">
+        <span>A Couple Of Minutes</span>
+      </div>
+    </div>
+  </div>
 </div>
