@@ -3,28 +3,29 @@ const amount = document.querySelector('.number')
 let countNumber = Number(amount.innerHTML)
 let initNumber = 0
 const cards = document.querySelectorAll('.card')
+const crown = document.querySelectorAll('.crownIcon')
 nextBtn.addEventListener('click', e => {
-  if (initNumber > 0) {
-    // 剩餘牌數減一
-    countNumber--
-    amount.innerHTML = countNumber
-    // 換下一張牌
-    cards[initNumber].classList.add('disappear')
-    initNumber++
-  } else {
+  // 輪流決定誰抽牌
+  crown[0].classList.toggle('invisible')
+  crown[1].classList.toggle('invisible')
+  if (initNumber === 0) {
     // 抽牌改成下一張牌
     nextBtn.innerHTML = `
-  <i class="fas fa-arrow-circle-right icon"></i>
-  <p>下一張牌</p>
-  `
-    // 剩餘牌數減一
-    countNumber--
-    amount.innerHTML = countNumber
-    //抽牌
-    cards[initNumber].classList.add('disappear')
-    initNumber++
+      <i class="fas fa-arrow-circle-right icon"></i>
+      <p>下一張牌</p>
+    `
+    // 隨機決定誰先抽牌
+    Math.random() > 0.5 ? crown[0].classList.toggle('invisible') : crown[1].classList.toggle('invisible')
   }
+  // 剩餘牌數減一
+  countNumber--
+  amount.innerHTML = countNumber
+  //抽牌
+  cards[initNumber].classList.add('disappear')
+  initNumber++
   
+
+  // 抽光牌庫
   if (countNumber === 0) {
     const div = nextBtn.parentElement
     console.log(div)
