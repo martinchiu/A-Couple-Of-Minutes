@@ -25,16 +25,14 @@
 <div class="info">
   <div class="martin">
     <i class="far fa-crown crownIcon"></i>
-    <div class="fn-card-with-pseudo">
+    <div class="fn-card-with-pseudo" data-bs-toggle="modal" data-bs-target="#mFnModal">
       <div class="fn-header">
         <span>．．．</span>
         <span>fn</span>
       </div>
-      <div class="body">
+      <div class="fn-body">
         <p>{{martin.functionCard.name}}</p>
-        <div class="icon">
-          <i class=''></i>
-        </div>
+        {{{martin.functionCard.icon}}}
       </div>
       <div class="fn-footer">
         <span>A Couple Of Minutes</span>
@@ -49,16 +47,14 @@
   </div>
   <div class="stacy">
     <i class="far fa-crown crownIcon"></i>
-    <div class="fn-card-with-pseudo">
+    <div class="fn-card-with-pseudo" data-bs-toggle="modal" data-bs-target="#sFnModal">
       <div class="fn-header">
         <span>．．．</span>
         <span>fn</span>
       </div>
-      <div class="body">
+      <div class="fn-body">
         <p>{{stacy.functionCard.name}}</p>
-        <div class="icon">
-          <i class=''></i>
-        </div>
+        {{{stacy.functionCard.icon}}}
       </div>
       <div class="fn-footer">
         <span>A Couple Of Minutes</span>
@@ -84,6 +80,40 @@
       </div>
       <div class="modal-footer">
         <a href="/" class="btn btn-primary" style="text-decoration: none;">回首頁</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id='mFnModal'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{martin.functionCard.name}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>{{martin.functionCard.function}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary use" data-bs-dismiss="modal">Use</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" tabindex="-1" id='sFnModal'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{stacy.functionCard.name}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>{{stacy.functionCard.function}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary use" data-bs-dismiss="modal">Use</button>
       </div>
     </div>
   </div>

@@ -5,6 +5,7 @@ let initNumber = 0
 const cards = document.querySelectorAll('.card')
 const crown = document.querySelectorAll('.crownIcon')
 const fnCard = document.querySelectorAll('.fn-card-with-pseudo')
+const useBtn = document.querySelectorAll('.use')
 nextBtn.addEventListener('click', e => {
   // 輪流決定誰抽牌
   crown[0].classList.toggle('invisible')
@@ -32,7 +33,6 @@ nextBtn.addEventListener('click', e => {
   // 抽光牌庫
   if (countNumber === 0) {
     const div = nextBtn.parentElement
-    console.log(div)
     div.removeChild(nextBtn)
     let newDiv = document.createElement('div')
     newDiv.innerHTML = `
@@ -43,4 +43,11 @@ nextBtn.addEventListener('click', e => {
     `
     div.appendChild(newDiv)
   }
+})
+// 使用功能卡
+useBtn.forEach((e, i) => {
+  e.addEventListener('click', e => {
+    fnCard[i].classList.add('used')
+    e.target.remove()
+  })
 })
