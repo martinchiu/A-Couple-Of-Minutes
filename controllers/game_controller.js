@@ -43,8 +43,22 @@ const gameController = {
   },
   getthirdMethod: (req, res) => {
     const { topic } = req.params
-    const cards = cardsNumber('thirdMethod', topic)
-    res.send(`${topic}`)
+    const { cards, num } = cardsNumber('thirdMethod', topic)
+    console.log(cards)
+    console.log(num)
+    const finale = require('../finale.json')[num]
+    let { player, deck, cardsAmount } = gameProcess(cards)
+    const martin = player[0]
+    const stacy = player[1]
+    res.render('gameProcess', {
+      cardsAmount,
+      deck,
+      martin,
+      stacy,
+      finale,
+      style: "game/process",
+      script: 'process',
+    })
   }
 }
 

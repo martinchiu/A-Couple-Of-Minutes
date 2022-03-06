@@ -15,17 +15,28 @@ const cardsNumber = function draw(method, params) {
     }
     return getRandomNumberArray()
   } else if (method === 'thirdMethod') {
+    const cards = []
+    let num = 0
     switch (params) {
       case 'firstDate':
-        return [3, 18, 35, 13, 26, 41, 5, 21, 95, 23]
+        cards.push(...[3, 18, 35, 13, 26, 41, 5, 21, 95, 23])
+        return { cards, num }
       case 'friendDate':
-        return [24, 26, 75, 27, 3, 90, 4, 20, 35, 94]
+        cards.push(...[24, 26, 75, 27, 3, 90, 4, 20, 35, 94])
+        num = 1
+        return { cards, num }
       case 'happyTrip':
-        return [7, 28, 11, 76, 19, 6, 17, 8, 30, 14]
+        cards.push(...[7, 28, 11, 76, 19, 6, 17, 8, 30, 14])
+        num = 2
+        return { cards, num }
       case 'heavyDate':
-        return [32, 42, 36, 60, 46, 71, 56, 85, 93, 34]
+        cards.push(...[32, 42, 36, 60, 46, 71, 56, 85, 93, 34])
+        num = 3
+        return { cards, num }
       case 'cozyTrip':
-        return [15, 31, 24, 16, 25, 44, 10, 43, 1, 33]
+        cards.push(...[15, 31, 24, 16, 25, 44, 10, 43, 1, 33])
+        num = 4
+        return { cards, num }
     }
   }
 }
