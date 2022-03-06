@@ -4,7 +4,7 @@ const functionCard = [
   { name: 'Hug', function: '使用擁抱當作這題的回答', icon: '<i class="fa-solid fa-face-grin-hearts"></i>' },
   {
     name: '？？？', function: '我想要聽更多，請再詳細地說明', icon: '<i class="fa-solid fa-circle-question"></i>' },
-  { name: 'Last ３', function: '：預告將在三個問題之後，結束這次的遊戲', icon: '<i class="fa-regular fa-3"></i>' }
+  { name: 'Last ３', function: '預告將在三個問題之後，結束這次的遊戲', icon: '<i class="fa-regular fa-3"></i>' }
 ]
 // num 為設定總共要抽幾張功能卡
 const draw = function(num) {

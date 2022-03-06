@@ -29,7 +29,7 @@ nextBtn.addEventListener('click', e => {
   amount.innerHTML = countNumber
   //抽牌
   cards[initNumber].classList.add('disappear')
-  initNumber++ 
+  initNumber++
   // 抽光牌庫
   if (countNumber === 0) {
     const div = nextBtn.parentElement
@@ -47,6 +47,10 @@ nextBtn.addEventListener('click', e => {
 // 使用功能卡
 useBtn.forEach((e, i) => {
   e.addEventListener('click', e => {
+    if (e.target.parentElement.classList.contains('Last')) {
+      countNumber = 3
+      amount.innerHTML = countNumber
+    }
     fnCard[i].classList.add('used')
     e.target.remove()
   })
