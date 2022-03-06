@@ -208,7 +208,7 @@
   {
     "id": "42",
     "content": "我們之間，有什麼是你在意很多次，但沒有被正視的事情",
-    "icon": "fa-regular fa-triangle-exclamatio"
+    "icon": "fa-regular fa-triangle-exclamation"
   },
   {
     "id": "43",
@@ -328,7 +328,7 @@
   {
     "id": "66",
     "content": "我們現在可以一起做哪件事，會讓你覺得很有戀愛的感覺",
-    "icon": "a-regular fa-face-grin-hearts"
+    "icon": "fa-regular fa-face-grin-hearts"
   },
   {
     "id": "67",
@@ -478,7 +478,7 @@
   {
     "id": "96",
     "content": "你現在最大的恐懼，或容易擔心的事情是什麼",
-    "icon": "a-regular fa-skull-crossbones"
+    "icon": "fa-regular fa-skull-crossbones"
   },
   {
     "id": "97",
@@ -493,7 +493,7 @@
   {
     "id": "99",
     "content": "我現在可以為妳做什麼事，會對目前的你很有幫助",
-    "icon": "fa-regular fa-handshake-angl"
+    "icon": "fa-regular fa-handshake-angle"
   },
   {
     "id": "100",
