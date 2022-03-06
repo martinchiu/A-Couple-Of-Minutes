@@ -27,7 +27,19 @@ const gameController = {
   getsecondMethod: (req, res) => {
     const { number } = req.query
     const cards = cardsNumber('secondMethod', number)
-    res.send(`${number}`)
+    const finale = require('../finale.json')[0]
+    let { player, deck, cardsAmount } = gameProcess(cards)
+    const martin = player[0]
+    const stacy = player[1]
+    res.render('gameProcess', {
+      cardsAmount,
+      deck,
+      martin,
+      stacy,
+      finale,
+      style: "game/process",
+      script: 'process',
+    })
   },
   getthirdMethod: (req, res) => {
     const { topic } = req.params

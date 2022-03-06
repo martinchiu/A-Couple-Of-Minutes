@@ -11,7 +11,7 @@ const cardsNumber = function draw(method, params) {
         let randomIndex = Math.floor(Math.random() * (index + 1))
           ;[numberArray[index], numberArray[randomIndex]] = [numberArray[randomIndex], numberArray[index]]
       }
-      return numberArray.slice(1, 10)
+      return numberArray.slice(0, params)
     }
     return getRandomNumberArray()
   } else if (method === 'thirdMethod') {
