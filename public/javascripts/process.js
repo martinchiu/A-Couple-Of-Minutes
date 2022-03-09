@@ -48,8 +48,10 @@ nextBtn.addEventListener('click', e => {
 useBtn.forEach((e, i) => {
   e.addEventListener('click', e => {
     if (e.target.parentElement.classList.contains('Last')) {
-      countNumber = 3
-      amount.innerHTML = countNumber
+      if (countNumber > 3) {
+        countNumber = 3
+        amount.innerHTML = countNumber
+      }
     }
     fnCard[i].classList.add('used')
     e.target.remove()
